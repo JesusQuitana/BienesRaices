@@ -1,0 +1,23 @@
+Nombre BD: "bienes_raices"
+
+Tablas:
+    
+    PROPIEDADES {
+        ID INT(11) PRIMARY KEY
+        TITULO VARCHAR(45)
+        PRECIO DECIMAL(10,2)
+        IMAGEN VARCHAR(200)
+        DESCRIPCION LONGTEXT
+        HABITACIONES INT(1)
+        WC INT(1)
+        ESTACIONAMIENTO INT(1)
+        CREADO DATE
+        VENDEDORES FOREING KEY INT(11)
+    }
+
+    VENDEDORES {
+        ID INT(11) PRIMARY KEY
+        NOMBRE VARCHAR(45)
+        APELLIDO VARCHAR(45)
+        TELEFONO VARCHAR(11)
+    }

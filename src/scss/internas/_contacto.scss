@@ -1,0 +1,92 @@
+.contacto {
+    margin: 5rem auto;
+    margin-top: 2.5rem;
+
+    .contacto_titulo {
+        margin-top: 0rem;
+    }
+
+    .contacto-1, .contacto-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .radios_form {
+        display: flex;
+        place-items: center;
+        gap: 2rem;
+    }
+
+    .margen_arriba {
+        margin-top: 5rem;
+    }
+
+    .inputs, textarea, select {
+        border: 2px solid $gris;
+        padding: 1rem 1rem;
+        border-radius: 10px;
+        height: 4.5rem;
+        appearance: none;
+    }
+
+    .input_imagen {
+        padding: 1rem 2rem;
+    }
+
+    #file-upload-button {
+        background-color: transparent;
+    }
+
+    input[type=radio] {
+        cursor: pointer;
+        border-radius: 50%;
+        height: auto;
+
+        &:checked {
+            background-color: $negro;
+        }
+    }
+
+    input[type=file] {
+        display: none;
+        background-color: transparent;
+    }
+
+    .input_imagen {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 2rem;
+        border: 2px solid $gris;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    label {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    textarea {
+        height: 15rem;
+        resize: none;
+    }
+
+    .contacto-2_enviar {
+        background-color: $verde;
+        height: 6rem;
+        margin-top: 3rem;
+        border-radius: 0;
+        padding: 1rem 5rem;
+        font-weight: 600;
+        font-size: 2.5rem;
+        color:$blanco;
+        cursor: pointer;
+        border: none;
+
+        &:hover {
+            background-color: darken($verde, 5%);
+        }
+    }
+}

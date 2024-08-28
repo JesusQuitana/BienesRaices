@@ -1,0 +1,89 @@
+@import '../base/variables';
+/*------------------------------------------------HEADER-INDEX--------------------------------------------------*/
+.header_principal {
+    margin: 0 auto;
+    background-image: url(../../build/img/full/header.jpg);
+    background-image: url(../../build/img/full/header.webp);
+    background-image: url(../../build/img/full/header.avif);
+    background-size: cover;
+    background-position: 20%;
+    background-repeat: no-repeat;
+    color: $blanco;
+
+    h1 {
+        color: $blanco;
+        span {
+            color: $blanco;
+        }
+    }
+
+    .header_eslogan_principal {
+        display: flex;
+        margin: 0 5rem;
+        margin-bottom: 5rem;
+        justify-content: space-between;
+        align-items: center;
+
+        @include desktop {
+            margin-bottom: 40rem;
+        }
+
+        
+        .header_titulo_principal {
+            text-transform:uppercase;
+            span {
+                font-weight: bold;
+            }
+        }
+        
+        .header_barra_nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            a {
+                color: $blanco;
+                font-weight: 400;
+                &:hover {
+                    color: $verde;
+                }
+            }
+            svg {
+                display: flex;
+                align-items: center;
+                fill: $grisOscuro;
+            }
+        }
+    }
+    .header_info_principal {
+        margin: 0 auto;
+        padding-bottom: 5rem;
+        h2 {
+            margin: 0 10rem;
+            font-weight: 600;
+            text-align: left;
+        }
+
+    }
+}
+
+@include telefono {
+    .header_eslogan_principal {
+        margin-bottom: 40rem;
+        flex-direction: column;
+
+        .header_barra_nav {
+            flex-direction: column;
+        }
+    }
+}
+
+@include tablet {
+    .header_eslogan_principal {
+        flex-direction: column;
+    }
+
+    .header_barra_nav {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+}

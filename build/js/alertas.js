@@ -1,0 +1,1 @@
+function quitarAlerta(){const e=document.querySelector(".alerta");setTimeout((()=>{e.style.display="none"}),2e3)}document.addEventListener("DOMContentLoaded",(function(){quitarAlerta()}));

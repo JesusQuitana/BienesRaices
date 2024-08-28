@@ -1,0 +1,86 @@
+/*------------------------------------------------MAIN-4---------------------------------------------------------*/
+.main-4_principal {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    margin: 3rem auto;
+
+    .main-4_entradas {
+        @include grid(2, 1rem);
+
+        .entrada {
+            grid-column: 1/3;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            column-gap: 2rem;
+            place-items: center;
+
+            .entrada_titulo {
+                margin: 0 auto;
+            }
+            p {
+                margin: 1rem auto;
+            }
+        }
+
+        h4::after {
+            content:"";
+            display: block;
+            background-color: $verde;
+            width: 15rem;
+            height: .5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .main-4_testimonios {
+        display: flex;
+        flex-direction: column;
+        background-color: $verde;
+        padding: 5rem;
+        border-radius: 20px;
+        -webkit-box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
+        box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
+
+        .testimonio {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        p {
+            color: $blanco;
+            margin: 0 0;
+        }
+    }
+}
+
+@include telefono {
+    .main-4_principal {
+        display: flex;
+        flex-direction: column;
+
+        .main-4_entradas {
+            display: flex;
+            flex-direction: column;
+            place-items: center;
+            
+            .entrada {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+    }
+}
+
+@include tablet {
+    .main-4_principal {
+        grid-template-columns: 1fr;
+
+        .main-4_entradas {
+            grid-row: 2/3;
+        }
+    }
+}

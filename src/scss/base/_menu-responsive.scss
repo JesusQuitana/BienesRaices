@@ -1,0 +1,53 @@
+.bar_menu {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+}
+
+@include telefono {
+
+    .bar_menu {
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+        transition: height .5s linear;
+    }
+
+    .header_barra_nav {
+        visibility: hidden;
+        opacity: 0;
+        max-height: 0;
+        transition: all .2s linear;
+    }
+
+    .visibled {
+        margin-top: 3rem;
+        visibility: visible;
+        opacity: 1;
+        max-height: 30rem;
+        transition: all .2s linear;
+    }
+
+}
+
+@include tablet {
+    .bar_menu {
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+    }
+
+    .header_barra_nav {
+        visibility: hidden;
+        opacity: 0;
+        max-height: 0;
+        transition: all .2s linear;
+    }
+
+    .visibled {
+        visibility: visible;
+        opacity: 1;
+        max-height: 30rem;
+        transition: all .2s linear;
+    }
+}

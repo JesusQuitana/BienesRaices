@@ -1,0 +1,21 @@
+/*------------------------------------------------MAIN-1---------------------------------------------------------*/
+.main-1_principal {
+    @include grid(3,2rem);
+    margin: 1rem auto;
+
+    .titulo_main-1 {
+        grid-column: 1/4;
+        text-transform: capitalize;
+    }
+
+    article {
+        text-align: center;
+    }
+}
+
+@include telefono {
+    .main-1_principal {
+        display: flex;
+        flex-direction: column;
+    }
+}

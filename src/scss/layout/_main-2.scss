@@ -1,0 +1,94 @@
+/*------------------------------------------------MAIN-2---------------------------------------------------------*/
+.main-2_principal {
+    margin: 1rem auto;
+    @include grid(3,2rem);
+
+    .titulo_main-2 {
+        grid-column: 1/4;
+        text-transform: capitalize;
+    }
+
+    article {
+        border: 2px solid #c8c8c8;
+        background-color: #eee;
+
+        h4 {
+            font-weight: 300;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .main-2_anuncio_info {
+            margin: 2rem 2rem auto;
+            p {
+                margin: 1rem auto;
+                line-height: 1.5;
+            }
+        }
+        
+        
+        .main-2_enlace {
+            display: block;
+            margin: 1.5rem 3rem;
+            background-color: $amarillo;
+            text-align: center;
+            font-weight: 600;
+            color: $blanco;
+            
+            &:hover {
+                background-color: darken($amarillo, 5%);
+            }
+        }
+    }
+}
+
+.precio {
+    color: $verde;
+    font-weight: 600;
+    margin: 1rem auto;
+}
+
+.main-2_anuncio_icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem auto;
+    p {
+        font-weight: bold;
+    }
+}
+
+.main-2_mas {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+
+    a {
+        background-color: $verde;
+        padding: 1rem 3rem;
+        color: $blanco;
+        font-weight: 600;
+        &:hover {
+            background-color: darken($verde, 5%);
+        }
+    }
+}
+
+@include telefono {
+    .main-2_principal {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@include tablet {
+    .main-2_principal {
+        grid-template-columns: repeat(2, 1fr);
+
+        .titulo_main-2 {
+            grid-column: 1/3;
+        }
+    }
+}

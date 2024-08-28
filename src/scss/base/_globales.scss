@@ -1,0 +1,133 @@
+@import 'variables';
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: $fuente_principal;
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+p,a {
+    font-weight: 300;
+    color: $negro;
+    font-size: 2.2rem;
+}
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+picture {
+    width: 100%;
+    display: block;
+
+}
+
+h1, h2, h3 {
+    font-family: $fuente_principal;
+    margin: calc($separacion / 2) 0;
+    font-weight: 300;
+    text-align: center;
+    
+}
+
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3.6rem;
+}
+h3 {
+    font-size: 3.2rem;
+}
+h4 {
+    font-size: 2.8rem;
+}
+span {
+    color:$amarillo;
+    font-weight: 600;
+}
+.max-centrado {
+    max-width: 80rem;
+}
+.justificado {
+    text-align: justify;
+}
+.margen {
+    margin: 3rem auto;
+}
+legend {
+    font-size: 3rem;
+}
+
+.icon_dark_mode {
+    cursor: pointer;
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    background-color: transparent;
+
+}
+
+.dark {
+    background-color: darken($grisOscuro, 10%);
+
+    .icon_dark_mode {
+        background-color: transparent;
+    }
+
+    p, a, h1, h2, h3, h4, label, legend {
+        color: $blanco;
+    }
+
+    input, textarea, select, option {
+        background-color: $grisOscuro;
+        color: $blanco;
+    }
+
+    .input_imagen {
+        background-color: $grisOscuro;
+        cursor: pointer;
+    }
+
+    .precio {
+        color: $verde;
+    }
+
+    .icons_blog {
+        svg {
+            stroke: $blanco;
+        }
+        .canti_anuncio {
+            color: $blanco;
+        }
+    }
+
+    .main-2_anuncio_info,
+    .main-2_anuncio_icons {
+        p, h1, h2, h3, h4 {
+            color: darken($grisOscuro, 10%);
+        }
+        .precio {
+            color: $verde;
+        }
+    }
+
+    .contenedor-admin {
+        .admin_propiedades {
+            .admin-ver {
+                border: 1px solid darken($gris, 20%);
+            }
+        }
+    }
+}

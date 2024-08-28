@@ -1,0 +1,59 @@
+/*------------------------------------------HEADER--------------------------------------------------------------*/
+.header_internas {
+    margin: 0 auto;
+    background-color: $grisOscuro;
+
+    h1 {
+        color: $blanco;
+        span {
+            color: $blanco;
+        }
+    }
+
+    .header_eslogan_principal {
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+        
+        .header_titulo_principal {
+            text-transform:uppercase;
+            span {
+                font-weight: bold;
+            }
+        }
+        
+        .header_barra_nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            a {
+                color: $blanco;
+                font-weight: 400;
+                &:hover {
+                    color: $verde;
+                }
+            }
+            svg {
+                display: flex;
+                align-items: center;
+                fill: $grisOscuro;
+            }
+        }
+    }
+}
+
+@include telefono {
+    .header_eslogan_principal {
+        margin-bottom: 40rem;
+        flex-direction: column;
+
+        .header_barra_nav {
+            flex-direction: column;
+        }
+    }
+
+    .header_internas {
+        padding-bottom: 5rem;
+    }
+}

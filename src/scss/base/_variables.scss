@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
+/*Fuentes*/
+$fuente_principal: 'Lato', sans-serif;
+
+/*Tamaño de Media Queries*/
+$telefono: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+
+/*Colores*/
+$negro: #000000;
+$amarillo: #E08709;;
+$verde: #71B100;
+$blanco: #FFFFFF;
+$gris: #e1e1e1;
+$grisOscuro: #333333;
+$rojo : #c51818;
+
+$separacion: 5rem;
+
+/*Fuentes*/
+$delgada: 300;
+$regular : 400;
+$bold: 700;
+$black: 900;
+
+/*Media Queries*/
+
+@mixin telefono {
+    @media (min-width: 10px) and (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 481px) and (max-width: 768px) {
+        @content;
+    }
+}
+  
+@mixin desktop {
+    @media (min-width: 769px) {
+        @content;
+    }
+}
+@mixin grid($columnas, $espaciado ) {
+    display: grid;
+    gap: $espaciado;
+    grid-template-columns: repeat($columnas, 1fr);
+}
+
+@keyframes bar_menu {
+    from {height: 0;}
+    to {height: 100%;}
+}
+
+.seccion {
+    margin-top: calc($separacion / 2);
+    margin-bottom: calc($separacion / 2);
+}
+.contenido-centrado {
+    max-width: 800px;
+}

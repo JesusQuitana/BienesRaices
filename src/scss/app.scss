@@ -1,0 +1,31 @@
+/*----------------BASE--------------------*/
+@import 'base/normalize';
+@import 'base/globales';
+@import 'base/variables';
+@import 'base/menu-responsive';
+
+/*----------UX INDEX-MAIN-----------------*/
+
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/main-1';
+@import 'layout/main-2';
+@import 'layout/main-3';
+@import 'layout/main-4';
+
+/*--------------INTERNAS-------------------*/
+@import 'internas/header-internas';
+
+/*--------------NOSOTROS-------------------*/
+@import 'internas/nosotros';
+
+
+/*--------------ANUNCIOS-------------------*/
+@import 'internas/blog';
+
+
+/*--------------CONTACTOS------------------*/
+@import 'internas/contacto';
+
+/*--------------ADMIN------------------*/
+@import 'internas/admin';

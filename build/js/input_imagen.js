@@ -1,0 +1,1 @@
+function nombreImagen(){const e=document.querySelector(".imagen"),n=document.querySelector(".nombre_imagen");e.addEventListener("change",(()=>{n.textContent=e.files[0].name}))}document.addEventListener("DOMContentLoaded",(function(){nombreImagen()})),nombreImagen();
